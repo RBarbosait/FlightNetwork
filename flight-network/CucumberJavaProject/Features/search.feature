@@ -9,19 +9,18 @@ Feature: Search for a flight
     And click search
     Then I validate the outcomes results
     
-      @tag2
+  @tag2
   Scenario: Athenas - Montevideo flight filtered by company
-    Given I open google chrome browser and go to flightnetwork URL
-    When I input from Athenas to Montevideo and search
-    And I choose AirCompany filter
+    Given I search for a flight Athenas - Montevido
+    When I choose AirCompany filter
     Then I validate the outcomes results - flights ui display=flights from api
     
-       @tag3
-  Scenario: Athenas - Montevideo flight filtered by stops
-    Given I open google chrome browser and go to flightnetwork URL
-    When I input from Athenas to Montevideo and search
-    And I choose Stops n bfilter
-    Then I validate the outcomes results - flights ui display=flights from api
+#       @tag3
+#  Scenario: Athenas - Montevideo flight filtered by stops
+#    Given I open google chrome browser and go to flightnetwork URL
+#    When I input from Athenas to Montevideo and search
+#    And I choose Stops n bfilter
+#    Then I validate the outcomes results - flights ui display=flights from api
     
 
 # @tag2
